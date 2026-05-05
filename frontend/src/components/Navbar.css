@@ -1,0 +1,141 @@
+.navbar {
+  background: var(--white);
+  padding: 16px 0;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar.admin-navbar {
+  background: linear-gradient(135deg, var(--secondary) 0%, #1e2526 100%);
+}
+
+.navbar.admin-navbar .nav-link {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.navbar.admin-navbar .nav-link:hover,
+.navbar.admin-navbar .nav-link.active {
+  color: var(--white);
+  border-bottom-color: var(--primary);
+}
+
+.navbar.admin-navbar .brand-text {
+  color: var(--white);
+}
+
+.navbar.admin-navbar .username {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-icon {
+  font-size: 1.5rem;
+}
+
+.brand-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-link {
+  color: var(--text-secondary);
+  font-weight: 500;
+  padding: 8px 0;
+  border-bottom: 2px solid transparent;
+  transition: var(--transition);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.username {
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.user-avatar.admin {
+  background: var(--primary);
+}
+
+.btn-logout {
+  background: transparent;
+  border: 1px solid var(--border);
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.navbar.admin-navbar .btn-logout {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.btn-logout:hover {
+  background: var(--danger);
+  color: var(--white);
+  border-color: var(--danger);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 16px;
+  }
+  
+  .username {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-content {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+}
